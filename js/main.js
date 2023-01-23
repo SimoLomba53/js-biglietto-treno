@@ -20,13 +20,13 @@ let price=pricenosale;
 
 if (eta < 18){
     price = (price - (pricenosale / 100 * 20));
-    console.log(price);
+    console.log(price.toFixed(2));
 }
  
 if(eta > 65)
 {
     price = (price - (pricenosale / 100 * 40));
-    console.log(price);
+    console.log(price.toFixed(2));
 }
 
 //IMPORT PRICE IN HTML
