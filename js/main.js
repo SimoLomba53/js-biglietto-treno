@@ -8,25 +8,30 @@
 
 //NUMERO KM 
 const kmnumber=prompt('Quanti km vuoi percorrere?');
-console.log(kmnumber);
+console.log('Totale Kilometri:', kmnumber);
 //ETA'
-const età = prompt('Quanti anni hai?');
-console.log(età);
+const eta = prompt('Quanti anni hai?');
+console.log('Anni:', eta);
 //PREZZO SENZA SCONTO
 let pricenosale = (kmnumber * 0.21);
-console.log(pricenosale)
+console.log('Prezzo senza sconto:', pricenosale)
 //SCONTI
-if (età < 18){
-    price = ((pricenosale) - (pricenosale / 100 * 20));
+let price=pricenosale;
+
+if (eta < 18){
+    price = (price - (pricenosale / 100 * 20));
     console.log(price);
-}else (età > 65)
+}
+ 
+if(eta > 65)
 {
-    price = ((pricenosale) - (pricenosale / 100 * 40));
+    price = (price - (pricenosale / 100 * 40));
     console.log(price);
 }
 
 //IMPORT PRICE IN HTML
 const prezzofinale = `Il tuo prezzo sarà: ${price} €`;
-
+console.log(prezzofinale);
 const prezzofinito=document.getElementById('finalprice');
 prezzofinito.innerHTML=prezzofinale;
+
